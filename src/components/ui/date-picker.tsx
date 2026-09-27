@@ -22,7 +22,7 @@ export default function DatePickerDemo() {
         render={
           <Button
             variant="noShadow"
-            className="w-[280px] justify-start text-left font-base"
+            className="w-70 justify-start text-left font-base"
           />
         }
       >

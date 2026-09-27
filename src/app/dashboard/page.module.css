@@ -1,0 +1,106 @@
+@reference "../../styles/globals.css";
+
+/* Full-page dashboard canvas. */
+.page {
+	@apply min-h-screen bg-background text-foreground;
+}
+
+/* Top bar separating navigation from dashboard content. */
+.header {
+	@apply border-b-2 border-border bg-secondary-background;
+}
+
+/* Header content aligned to the dashboard width. */
+.headerInner {
+	@apply mx-auto flex max-w-6xl items-center justify-between px-5 py-4 sm:px-8;
+}
+
+/* Brand link and mark. */
+.brand {
+	@apply flex items-center gap-3 text-foreground no-underline;
+}
+
+/* Brand tile echoing the application's neobrutalist palette. */
+.brandMark {
+	@apply flex size-10 items-center justify-center border-2 border-border bg-chart-3 text-lg font-bold shadow-shadow;
+}
+
+/* Compact application name in the header. */
+.brandName {
+	@apply text-sm font-bold uppercase;
+}
+
+/* Main dashboard content region. */
+.content {
+	@apply mx-auto grid max-w-6xl items-start gap-8 px-5 py-10 sm:px-8 sm:py-14 lg:grid-cols-[minmax(0,1fr)_minmax(18rem,24rem)] lg:items-center lg:gap-16;
+}
+
+/* Welcome copy aligned with the account summary. */
+.welcome {
+	@apply max-w-xl;
+}
+
+/* Main dashboard heading. */
+.heading {
+	@apply mt-5 break-words text-4xl font-bold sm:text-5xl;
+}
+
+/* Short orientation copy beneath the heading. */
+.description {
+	@apply mt-5 max-w-lg text-base leading-7 text-foreground/70;
+}
+
+/* Account summary card sized to its dashboard column. */
+.accountCard {
+	@apply w-full;
+}
+
+/* Account header row with identity, title, and state. */
+.accountHeader {
+	@apply flex grid-cols-none grid-rows-none flex-row items-center gap-3;
+}
+
+/* Account avatar using the component's built-in fallback styling. */
+.avatar {
+	@apply border-2 border-border shadow-shadow;
+}
+
+/* Account heading stack. */
+.accountHeading {
+	@apply min-w-0 flex-1 gap-2;
+}
+
+/* Account card title. */
+.accountTitle {
+	@apply text-base font-bold;
+}
+
+/* Account card supporting description. */
+.accountDescription {
+	@apply text-sm text-foreground/65;
+}
+
+/* Status badge aligned to the right of the account header. */
+.status {
+	@apply shrink-0;
+}
+
+/* Account details area with a top divider. */
+.accountContent {
+	@apply border-t-2 border-border;
+}
+
+/* Email label and value row. */
+.emailRow {
+	@apply flex flex-col gap-1 sm:flex-row sm:items-center sm:justify-between sm:gap-4;
+}
+
+/* Small label for the account email. */
+.emailLabel {
+	@apply text-sm font-medium text-foreground/60;
+}
+
+/* Account email, safely wrapping long values on narrow screens. */
+.emailValue {
+	@apply min-w-0 break-all text-sm font-medium text-foreground;
+}

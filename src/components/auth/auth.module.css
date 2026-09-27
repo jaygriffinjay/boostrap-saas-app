@@ -1,0 +1,73 @@
+@reference "../../styles/globals.css";
+
+/* ─── MagicLinkSignInPanel ─── */
+
+/* Frame for the sign-in panel. */
+.panel {
+	@apply w-full max-w-md bg-secondary-background;
+}
+
+/* Panel introduction separated from the form. */
+.panelHeader {
+	@apply border-b-2 border-border pb-5;
+}
+
+/* Main content holding the sign-in form and its feedback state. */
+.panelContent {
+	@apply space-y-4;
+}
+
+/* Small label above the panel title. */
+.panelEyebrow {
+	@apply text-xs font-bold uppercase text-foreground/65;
+}
+
+/* Panel heading. */
+.panelTitle {
+	@apply mt-2 text-2xl font-bold;
+}
+
+/* Supporting sign-in copy. */
+.panelDescription {
+	@apply mt-2 text-sm leading-6 text-foreground/70;
+}
+
+/* Email form spacing. */
+.form {
+	@apply space-y-4;
+}
+
+/* Email field label. */
+.label {
+	@apply block font-semibold;
+}
+
+/* Email address input. */
+.input {
+	@apply h-12 bg-background text-base;
+}
+
+/* Primary action for requesting a sign-in link. */
+.submitButton {
+	@apply h-12 w-full font-heading;
+}
+
+/* Confirmation shown after requesting a sign-in link. */
+.message {
+	@apply border-chart-4 bg-chart-4 font-medium;
+}
+
+/* Error shown when requesting a sign-in link fails. */
+.error {
+	@apply border-chart-2 bg-chart-2 font-medium text-foreground;
+}
+
+/* Bottom note separated from the form content. */
+.panelFooter {
+	@apply border-t-2 border-border pt-4;
+}
+
+/* Expiration and one-time-use note. */
+.footnote {
+	@apply text-xs leading-5 text-foreground/60;
+}

@@ -1,0 +1,61 @@
+@reference "../styles/globals.css";
+
+/* Full-page background and foreground colors. */
+.page {
+	@apply min-h-screen bg-background text-foreground;
+}
+
+/* Top bar framing the app identity. */
+.header {
+	@apply border-b-2 border-border bg-secondary-background;
+}
+
+/* Centered header contents. */
+.headerInner {
+	@apply mx-auto flex max-w-6xl items-center justify-between px-5 py-4 sm:px-8;
+}
+
+/* App name and mark. */
+.brand {
+	@apply flex items-center gap-3;
+}
+
+/* Small colored brand tile. */
+.brandMark {
+	@apply flex size-10 items-center justify-center border-2 border-border bg-chart-3 text-lg font-bold shadow-shadow;
+}
+
+/* App name beside the brand mark. */
+.brandName {
+	@apply text-sm font-bold uppercase;
+}
+
+/* Supporting line in the header. */
+.tagline {
+	@apply text-sm font-medium text-foreground/65;
+}
+
+/* Responsive main content layout. */
+.content {
+	@apply mx-auto grid min-h-[calc(100vh-73px)] max-w-6xl items-center gap-12 px-5 py-12 sm:px-8 lg:grid-cols-[1fr_auto] lg:gap-20;
+}
+
+/* Welcome copy column. */
+.intro {
+	@apply max-w-xl;
+}
+
+/* Small introductory label above the heading. */
+.eyebrow {
+	@apply text-sm font-bold uppercase text-foreground/60;
+}
+
+/* Main welcome heading. */
+.heading {
+	@apply mt-3 text-4xl font-bold sm:text-5xl;
+}
+
+/* Supporting description beneath the heading. */
+.description {
+	@apply mt-5 max-w-lg text-base leading-7 text-foreground/70;
+}

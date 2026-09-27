@@ -8,6 +8,8 @@ export const env = createEnv({
 	 */
 	server: {
 		DATABASE_URL: z.string().url(),
+		NEON_AUTH_BASE_URL: z.string().url(),
+		NEON_AUTH_COOKIE_SECRET: z.string().min(32),
 		NODE_ENV: z
 			.enum(["development", "test", "production"])
 			.default("development"),
@@ -28,6 +30,8 @@ export const env = createEnv({
 	 */
 	runtimeEnv: {
 		DATABASE_URL: process.env.DATABASE_URL,
+		NEON_AUTH_BASE_URL: process.env.NEON_AUTH_BASE_URL,
+		NEON_AUTH_COOKIE_SECRET: process.env.NEON_AUTH_COOKIE_SECRET,
 		NODE_ENV: process.env.NODE_ENV,
 		// NEXT_PUBLIC_CLIENTVAR: process.env.NEXT_PUBLIC_CLIENTVAR,
 	},

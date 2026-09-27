@@ -1,0 +1,21 @@
+@reference "../../styles/globals.css";
+
+/* Vertical content rhythm for reference pages. */
+.content {
+	@apply flex flex-col gap-8;
+}
+
+/* Space between a section heading and its content. */
+.content section {
+	@apply flex flex-col items-start gap-4;
+}
+
+/* Consistent scale for second-level document headings. */
+.content h2 {
+	@apply scroll-mt-8 text-2xl font-bold;
+}
+
+/* Consistent scale for third-level document headings. */
+.content h3 {
+	@apply scroll-mt-8 text-xl font-bold;
+}

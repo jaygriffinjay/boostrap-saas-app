@@ -1,0 +1,111 @@
+@reference "../../../styles/globals.css";
+
+/* Development specimen page canvas. */
+.page {
+	@apply min-h-screen bg-secondary-background px-5 py-10 text-foreground sm:px-8 sm:py-14;
+}
+
+/* Introductory heading and explanation. */
+.header {
+	@apply mx-auto mb-8 max-w-6xl;
+}
+
+/* Small environment indicator. */
+.eyebrow {
+	@apply text-xs font-bold uppercase text-foreground/60;
+}
+
+/* Page title. */
+.title {
+	@apply mt-2 text-4xl font-bold sm:text-5xl;
+}
+
+/* Context line under the title. */
+.intro {
+	@apply mt-3 max-w-2xl text-base text-foreground/70;
+}
+
+/* Responsive specimen grid. */
+.grid {
+	@apply mx-auto grid max-w-6xl gap-5 md:grid-cols-2;
+}
+
+/* Individual typography specimen panel. */
+.specimen {
+	@apply min-w-0;
+}
+
+/* Vertical rhythm within a specimen. */
+.stack {
+	@apply flex flex-col items-start gap-4;
+}
+
+/* Color-pairing section separated from the typography specimens. */
+.colorSection {
+	@apply mx-auto mt-12 max-w-6xl;
+}
+
+/* Heading for the color-pairing section. */
+.colorHeading {
+	@apply text-2xl font-bold;
+}
+
+/* Brief explanation for the color samples. */
+.colorIntro {
+	@apply mt-2 text-sm text-foreground/70;
+}
+
+/* Responsive grid of typography-on-color samples. */
+.colorGrid {
+	@apply mt-5 grid gap-4 sm:grid-cols-2;
+}
+
+/* Individual color and typography pairing sample. */
+.colorSample {
+	@apply min-w-0 border-2 border-border p-5 shadow-shadow;
+}
+
+/* Primary theme color pairing. */
+.mainSample {
+	@apply bg-main text-main-foreground;
+}
+
+/* Default page surface pairing. */
+.backgroundSample {
+	@apply bg-background text-foreground;
+}
+
+/* Yellow accent pairing. */
+.yellowSample {
+	@apply bg-chart-3 text-foreground;
+}
+
+/* Green accent pairing. */
+.greenSample {
+	@apply bg-chart-4 text-foreground;
+}
+
+/* Token label inside each color sample. */
+.sampleLabel {
+	@apply opacity-70;
+}
+
+/* Example heading inside each color sample. */
+.sampleTitle {
+	@apply mt-3 text-xl font-bold;
+}
+
+/* Example body copy inside each color sample. */
+.sampleText {
+	@apply mt-2 text-sm leading-6;
+}
+
+/* Underline treatment adjusted for the primary background. */
+.sampleUnderline {
+	@apply decoration-current underline-offset-4;
+}
+
+/* Highlight treatment kept legible on the default surface. */
+.sampleHighlight {
+	@apply bg-chart-3 text-foreground;
+}

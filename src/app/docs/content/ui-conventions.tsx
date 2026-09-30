@@ -1,11 +1,11 @@
-import { H2, H3, InlineCode, List, ListItem, Paragraph } from "@/components/typography";
+import { Bold, H2, H3, InlineCode, Link, List, ListItem, Paragraph } from "@/components/typography";
 
 import styles from "@/app/docs/doc-content.module.css";
 
 export const docMetadata = {
 	title: "UI conventions",
 	slug: "ui-conventions",
-	description: "Use the shared typography, UI primitives, and CSS module conventions.",
+	description: "Guidance for composing consistent pages with this project's typography, UI primitives, and styles.",
 	order: 2,
 	section: "Development",
 } as const;
@@ -14,33 +14,55 @@ export default function UiConventionsDoc() {
 	return (
 		<div className={styles.content}>
 			<Paragraph>
-				Build new screens from the existing project components first. The goal is a consistent
-				starting point, not a second design system beside the one already installed.
+				Build interfaces by composing the shared components and theme rather than creating one-off
+				versions of common UI. The <Link href="/docs/typography-gallery">Typography gallery</Link> shows
+				the available text components and color pairings.
 			</Paragraph>
 
 			<section>
-				<H2>Reuse components</H2>
-				<List>
-					<ListItem>Import shared text treatments from <InlineCode>@/components/typography</InlineCode>.</ListItem>
-					<ListItem>Import shadcn primitives directly, such as <InlineCode>@/components/ui/button</InlineCode>.</ListItem>
-					<ListItem>Use the existing Neobrutalism palette and tokens in <InlineCode>src/styles/globals.css</InlineCode>.</ListItem>
-				</List>
+				<H2>Use the shared component set</H2>
+				<Paragraph>
+					Import text components from <InlineCode>@/components/typography</InlineCode> and UI primitives
+					from their direct paths under <InlineCode>@/components/ui</InlineCode>. Check the installed
+					components before building a duplicate; compose existing pieces and pass <InlineCode>className</InlineCode>
+					for local variations.
+				</Paragraph>
 			</section>
 
 			<section>
-				<H2>Style TSX with CSS modules</H2>
+				<H2>Keep heading levels semantic</H2>
 				<Paragraph>
-					Components and pages under <InlineCode>src/</InlineCode> should not contain inline Tailwind
-					class strings. Put semantic classes in a co-located <InlineCode>.module.css</InlineCode>
-					file, add an <InlineCode>@reference</InlineCode> to the global stylesheet, and use
-					<InlineCode>@apply</InlineCode> there.
+					Choose heading levels by document structure, not by the size you want visually. Use one page-level
+					<InlineCode>H1</InlineCode>, <InlineCode>H2</InlineCode> for major sections, and <InlineCode>H3</InlineCode>
+					for subsections. The docs table of contents reads H2 and H3 headings, so make their text descriptive.
 				</Paragraph>
-				<H3>Shared component APIs</H3>
+				<H3>Use emphasis with intent</H3>
 				<Paragraph>
-					Accept and forward <InlineCode>className</InlineCode> where a component is intended to be
-					extensible. Use <InlineCode>cn()</InlineCode> when combining conditional classes or caller
-					classes.
+					Use <Bold>bold</Bold> for short important phrases. Prefer inline code for identifiers and commands,
+					and links for destinations. Avoid stacking several emphasis treatments on the same text without a
+					clear reason.
 				</Paragraph>
+			</section>
+
+			<section>
+				<H2>Style with CSS modules</H2>
+				<Paragraph>
+					Keep page and component styling in co-located <InlineCode>.module.css</InlineCode> files. Start each
+					module with <InlineCode>@reference</InlineCode> to <InlineCode>src/styles/globals.css</InlineCode>,
+					then use semantic class names and <InlineCode>@apply</InlineCode>. Avoid inline utility strings in TSX.
+				</Paragraph>
+				<H3>Use theme tokens</H3>
+				<Paragraph>
+					Prefer semantic tokens such as background, foreground, main, and border over hard-coded colors.
+					Check foreground/background contrast, especially when using chart accent colors for large surfaces.
+				</Paragraph>
+				<H3>Browse the component gallery</H3>
+				<List>
+					<ListItem>
+						See <Link href="/docs/typography-gallery">Typography & color gallery</Link> for examples of the
+						available typography components and theme pairings.
+					</ListItem>
+				</List>
 			</section>
 		</div>
 	);

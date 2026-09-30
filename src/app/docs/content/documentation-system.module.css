@@ -1,0 +1,6 @@
+@reference "../../../styles/globals.css";
+
+/* Readable folder tree diagram for the documentation architecture. */
+.folderTree {
+	@apply overflow-x-auto border-2 border-border bg-background p-4 font-mono text-xs leading-6 text-foreground shadow-shadow sm:text-sm;
+}

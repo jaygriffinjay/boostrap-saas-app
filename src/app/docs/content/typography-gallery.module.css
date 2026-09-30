@@ -1,0 +1,86 @@
+@reference "../../../styles/globals.css";
+
+/* Grid for the heading-level examples. */
+.headingGrid {
+	@apply grid w-full gap-4;
+}
+
+/* Responsive grid for the component example cards. */
+.galleryGrid {
+	@apply grid w-full gap-4 lg:grid-cols-2;
+}
+
+/* Prevent a gallery card from overflowing its grid column. */
+.galleryCard {
+	@apply min-w-0;
+}
+
+/* Vertical spacing within a gallery card. */
+.galleryStack {
+	@apply flex flex-col items-start gap-5;
+}
+
+/* Heading example paired with its level label. */
+.headingSample {
+	@apply flex w-full flex-col items-start gap-2 border-b border-border/50 pb-4 last:border-b-0 last:pb-0;
+}
+
+/* Custom styling example for the shared Text component. */
+.textSample {
+	@apply rounded-base bg-chart-5 px-2 py-1 font-bold text-foreground;
+}
+
+/* Grid for the theme color pairing examples. */
+.colorGrid {
+	@apply grid w-full gap-4 sm:grid-cols-2;
+}
+
+/* Shared surface, border, and spacing for each color sample. */
+.colorSample {
+	@apply min-w-0 border-2 border-border p-5 shadow-shadow;
+}
+
+/* Main theme color paired with its foreground token. */
+.mainSample {
+	@apply bg-main text-main-foreground;
+}
+
+/* Default background paired with the foreground token. */
+.backgroundSample {
+	@apply bg-background text-foreground;
+}
+
+/* Yellow accent paired with the standard foreground. */
+.yellowSample {
+	@apply bg-chart-3 text-foreground;
+}
+
+/* Green accent paired with the standard foreground. */
+.greenSample {
+	@apply bg-chart-4 text-foreground;
+}
+
+/* Token label inside a color sample. */
+.sampleLabel {
+	@apply opacity-70;
+}
+
+/* Heading style inside a color sample. */
+.sampleTitle {
+	@apply mt-3 text-xl font-bold;
+}
+
+/* Supporting text style inside a color sample. */
+.sampleText {
+	@apply mt-2 text-sm leading-6;
+}
+
+/* Underline treatment adapted to each sample's foreground. */
+.sampleUnderline {
+	@apply decoration-current underline-offset-4;
+}
+
+/* Highlight treatment with explicit readable colors. */
+.sampleHighlight {
+	@apply bg-chart-3 text-foreground;
+}

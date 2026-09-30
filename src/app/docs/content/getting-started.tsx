@@ -1,11 +1,11 @@
-import { H2, H3, InlineCode, Link, List, ListItem, Paragraph } from "@/components/typography";
+import { H2, InlineCode, Link, List, ListItem, Paragraph } from "@/components/typography";
 
 import styles from "@/app/docs/doc-content.module.css";
 
 export const docMetadata = {
 	title: "Getting started",
 	slug: "getting-started",
-	description: "Set up a fresh app from this development boilerplate.",
+	description: "Prepare a fresh checkout and run the starter locally.",
 	order: 1,
 	section: "Overview",
 } as const;
@@ -14,35 +14,39 @@ export default function GettingStartedDoc() {
 	return (
 		<div className={styles.content}>
 			<Paragraph>
-				This is the internal reference for the Neontest development starter. It records the setup
-				steps and conventions that are easy to forget when starting a new app.
+				Use this page to get a fresh checkout running. The rest of the internal docs cover the
+				individual services and day-to-day development conventions in more detail.
 			</Paragraph>
 
 			<section>
-				<H2>What is included</H2>
+				<H2>Prerequisites</H2>
 				<List>
-					<ListItem>Next.js App Router with TypeScript and Tailwind CSS v4.</ListItem>
-					<ListItem>Neon Postgres, Drizzle ORM, and Managed Auth magic-link sign-in.</ListItem>
-					<ListItem>Shared typography components and shadcn-based UI primitives.</ListItem>
+					<ListItem>Node.js 20.19 or newer.</ListItem>
+					<ListItem>npm 11, as specified by the project package manager.</ListItem>
+					<ListItem>A Neon account and Neon CLI access for creating or linking a project.</ListItem>
 				</List>
 			</section>
 
 			<section>
-				<H2>Start the app</H2>
+				<H2>First run</H2>
 				<Paragraph>
-					Install dependencies with <InlineCode>npm ci</InlineCode>, configure the environment
-					variables described in <Link href="/docs/neon">Neon setup</Link>, then run{" "}
-					<InlineCode>npm run dev</InlineCode>.
+					Install dependencies with <InlineCode>npm ci</InlineCode>. Create or select a separate Neon
+					project for this app, then follow <Link href="/docs/neon">Neon setup</Link> to link it,
+					apply <InlineCode>neon.ts</InlineCode>, and configure local environment variables.
+				</Paragraph>
+				<Paragraph>
+					Run <InlineCode>npm run dev</InlineCode> and open the local URL printed by Next.js. The
+					home page sends a magic link; after sign-in, the protected destination is{" "}
+					<InlineCode>/dashboard</InlineCode>.
 				</Paragraph>
 			</section>
 
 			<section>
-				<H2>Useful checks</H2>
-				<H3>Before a larger change</H3>
+				<H2>Where to go next</H2>
 				<Paragraph>
-					Use <InlineCode>npm run check</InlineCode> for Biome, <InlineCode>npm run typecheck</InlineCode>
-					for TypeScript, and <InlineCode>npm run build</InlineCode> for a production build. Run
-					them at meaningful checkpoints, not after every small edit.
+					See <Link href="/docs/database">Database</Link> for Drizzle workflows, <Link href="/docs/development-workflow">Development workflow</Link>{" "}
+					for project scripts and checks, and <Link href="/docs/ui-conventions">UI conventions</Link>{" "}
+					before adding or styling components.
 				</Paragraph>
 			</section>
 		</div>

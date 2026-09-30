@@ -1,0 +1,16 @@
+@reference "../../../styles/globals.css";
+
+/* Vertical spacing between typography stress cases. */
+.content {
+	@apply flex flex-col gap-8;
+}
+
+/* Constrain examples to expose overflow and line-wrapping problems. */
+.narrowCard {
+	@apply w-full max-w-sm;
+}
+
+/* Separate nested inline-treatment examples for quick scanning. */
+.examples {
+	@apply flex flex-col gap-4;
+}

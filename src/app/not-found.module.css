@@ -1,0 +1,56 @@
+@reference "../styles/globals.css";
+
+/* Full-page error background and foreground colors. */
+.page {
+	@apply min-h-screen bg-background text-foreground;
+}
+
+/* Top bar framing the app identity. */
+.header {
+	@apply border-b-2 border-border bg-secondary-background;
+}
+
+/* Centered header contents. */
+.headerInner {
+	@apply mx-auto flex max-w-6xl items-center justify-between px-5 py-4 sm:px-8;
+}
+
+/* App name and mark. */
+.brand {
+	@apply flex items-center gap-3;
+}
+
+/* Small colored brand tile. */
+.brandMark {
+	@apply flex size-10 items-center justify-center border-2 border-border bg-chart-3 text-lg font-bold shadow-shadow;
+}
+
+/* App name beside the brand mark. */
+.brandName {
+	@apply text-sm font-bold uppercase;
+}
+
+/* Unframed error message aligned with the site's content. */
+.notFoundContent {
+	@apply mx-auto flex min-h-[calc(100svh-73px)] max-w-6xl flex-col items-start justify-center px-5 py-16 sm:px-8;
+}
+
+/* Error code displayed as a compact accent label. */
+.errorCode {
+	@apply m-0 border-l-4 border-border bg-chart-3 px-4 py-2 text-2xl font-bold text-foreground;
+}
+
+/* Main error heading. */
+.heading {
+	@apply mt-3 text-4xl font-bold sm:text-5xl;
+}
+
+/* Supporting description beneath the error heading. */
+.description {
+	@apply mt-5 max-w-lg text-base leading-7 text-foreground/70;
+}
+
+/* Primary navigation out of the error page. */
+.homeLink {
+	@apply mt-8;
+}

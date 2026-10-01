@@ -7,6 +7,7 @@ export const env = createEnv({
 	 * isn't built with invalid env vars.
 	 */
 	server: {
+		SITE_URL: z.string().url().optional(),
 		DATABASE_URL: z.string().url(),
 		NEON_AUTH_BASE_URL: z.string().url(),
 		NEON_AUTH_COOKIE_SECRET: z.string().min(32),
@@ -29,6 +30,7 @@ export const env = createEnv({
 	 * middlewares) or client-side so we need to destruct manually.
 	 */
 	runtimeEnv: {
+		SITE_URL: process.env.SITE_URL,
 		DATABASE_URL: process.env.DATABASE_URL,
 		NEON_AUTH_BASE_URL: process.env.NEON_AUTH_BASE_URL,
 		NEON_AUTH_COOKIE_SECRET: process.env.NEON_AUTH_COOKIE_SECRET,

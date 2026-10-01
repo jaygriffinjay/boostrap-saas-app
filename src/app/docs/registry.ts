@@ -4,6 +4,7 @@ import DevelopmentWorkflowPage, { docMetadata as developmentWorkflowMetadata } f
 import DocumentationSystemPage, { docMetadata as documentationSystemMetadata } from "./content/documentation-system";
 import GettingStartedPage, { docMetadata as gettingStartedMetadata } from "./content/getting-started";
 import NeonPage, { docMetadata as neonMetadata } from "./content/neon";
+import ScreenshotsPage, { docMetadata as screenshotsMetadata } from "./content/screenshots";
 import TypographyDebugPage, { docMetadata as typographyDebugMetadata } from "./content/typography-debug";
 import TypographyGalleryPage, { docMetadata as typographyGalleryMetadata } from "./content/typography-gallery";
 import UiConventionsPage, { docMetadata as uiConventionsMetadata } from "./content/ui-conventions";
@@ -16,6 +17,7 @@ const modules: DocModule[] = [
 	{ docMetadata: documentationSystemMetadata, default: DocumentationSystemPage },
 	{ docMetadata: gettingStartedMetadata, default: GettingStartedPage },
 	{ docMetadata: neonMetadata, default: NeonPage },
+	{ docMetadata: screenshotsMetadata, default: ScreenshotsPage },
 	{ docMetadata: typographyDebugMetadata, default: TypographyDebugPage },
 	{ docMetadata: typographyGalleryMetadata, default: TypographyGalleryPage },
 	{ docMetadata: uiConventionsMetadata, default: UiConventionsPage },

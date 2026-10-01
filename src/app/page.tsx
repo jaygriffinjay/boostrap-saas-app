@@ -6,11 +6,11 @@ export default function HomePage() {
 		<main className={styles.page}>
 			<header className={styles.header}>
 				<div className={styles.headerInner}>
-					<a aria-label="NeonTest home" className={styles.brand} href="/">
+					<a aria-label="Bootstrap SaaS App home" className={styles.brand} href="/">
 						<span className={styles.brandMark}>
-							n
+							b
 						</span>
-						<span className={styles.brandName}>NeonTest</span>
+						<span className={styles.brandName}>Bootstrap SaaS App</span>
 					</a>
 					<span className={styles.tagline}>
 						A little space to try things out

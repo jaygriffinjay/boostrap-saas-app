@@ -1,3 +1,4 @@
+import BiomePage, { docMetadata as biomeMetadata } from "./content/biome";
 import DatabasePage, { docMetadata as databaseMetadata } from "./content/database";
 import DevelopmentWorkflowPage, { docMetadata as developmentWorkflowMetadata } from "./content/development-workflow";
 import DocumentationSystemPage, { docMetadata as documentationSystemMetadata } from "./content/documentation-system";
@@ -9,6 +10,7 @@ import UiConventionsPage, { docMetadata as uiConventionsMetadata } from "./conte
 import type { DocModule, RegisteredDoc } from "./types";
 
 const modules: DocModule[] = [
+	{ docMetadata: biomeMetadata, default: BiomePage },
 	{ docMetadata: databaseMetadata, default: DatabasePage },
 	{ docMetadata: developmentWorkflowMetadata, default: DevelopmentWorkflowPage },
 	{ docMetadata: documentationSystemMetadata, default: DocumentationSystemPage },

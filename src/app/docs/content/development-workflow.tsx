@@ -16,6 +16,8 @@ export default function DevelopmentWorkflowDoc() {
 			<Paragraph>
 				This page collects the recurring commands and repository conventions for day-to-day work.
 				For the visual component rules, see <Link href="/docs/ui-conventions">UI conventions</Link>.
+				For live editor diagnostics, format-on-save, and safe versus unsafe fixes, see{" "}
+				<Link href="/docs/biome">Biome and editor setup</Link>.
 			</Paragraph>
 
 			<section>
@@ -27,6 +29,22 @@ export default function DevelopmentWorkflowDoc() {
 					<ListItem><InlineCode>npm run build</InlineCode> creates a production build.</ListItem>
 					<ListItem><InlineCode>npm run record:demo</InlineCode> opens the local app in a headed browser and records a manual walkthrough. Press Enter in the terminal to save the WebM under the ignored <InlineCode>recordings/</InlineCode> directory.</ListItem>
 				</List>
+			</section>
+
+			<section>
+				<H2>What runs automatically?</H2>
+				<Paragraph>
+					<InlineCode>npm run dev</InlineCode> runs Next.js with hot reload, not a Biome watcher.
+					<InlineCode>npm run typecheck</InlineCode> checks TypeScript; <InlineCode>npm run check</InlineCode>
+					checks formatting, lint rules, and enabled assists. They answer different questions.
+					The current scripts do not run Biome before builds or commits. Editor checks depend on
+					your installed extensions and settings, so another developer may see different diagnostics.
+				</Paragraph>
+				<Paragraph>
+					Use narrow checks during work and full checks at a meaningful checkpoint. Review changes
+					from <InlineCode>npm run check:write</InlineCode> before committing; reserve
+					<InlineCode>npm run check:unsafe</InlineCode> for deliberate, reviewed cleanup.
+				</Paragraph>
 			</section>
 
 			<section>
